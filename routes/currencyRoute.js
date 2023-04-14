@@ -15,11 +15,13 @@ const currencyData = {
     }
 }
 
+// to get all the currency data 
 router.get('/all', (req, res) => {
 
     res.status(200).json(currencyData)
 })
 
+// to convert the currency data 
 router.get('/:from/:to', (req, res) => {
     try{
         const fromCurrency = req.params.from
